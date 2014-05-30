@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+
+  "name": "Youtube Downloader",
+  "description": "Download Videos on Youtube",
+  "version": "1.0",
+  "content_scripts": [
+        {
+            "matches": [
+                "*://www.youtube.com/watch?v=*"
+            ],
+            "js": [
+                "main.js"
+            ]
+        }
+    ],
+  "web_accessible_resources" : [
+  "injected.js"
+  ],
+  "permissions": [
+    "activeTab",
+    "tabs",
+            "<all_urls>"
+
+  ]
+}
